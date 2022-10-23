@@ -1,0 +1,96 @@
+.bottomNav {
+  height: 90px;
+  position: sticky !important;
+  top: 80px;
+  z-index: 999;
+  background-color: #fefeff;
+}
+
+.bottomNav__wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(
+    max-content,
+    calc(
+      (
+          100% - var(--contentscroller_gap, 16px) *
+            (var(--contentscroller_visible-items, unset) - 1)
+        ) / var(--contentscroller_visible-items, unset)
+    )
+  );
+  overflow: var(--contentscroller_overflow, auto hidden);
+  scroll-padding-inline: var(0 24px, 32px);
+}
+
+.bottomNav__wrapper .bottomNav__individual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  background-color: unset;
+  border: unset;
+  padding: 4px 0 14px;
+  margin: 12px 0 0;
+  transition: box-shadow 0.2s ease, color 0.2s ease;
+  font-size: 12px;
+  line-height: 16px;
+  color: #717171;
+  font-weight: 600;
+  gap: 8px;
+  min-width: revert;
+  width: max-content;
+  scroll-snap-align: var(--contentscroller_scrollsnapalign, start);
+  filter: contrast(calc(13 / 44));
+}
+
+.bottomNav__wrapper a {
+  text-decoration: none;
+}
+.bottomNav__wrapper .bottomNav__individual:hover {
+  border-bottom: 2px solid #dddcdc;
+  border-radius: 0px;
+  filter: contrast(1);
+  color: #000 !important;
+}
+
+.bottomNav__wrapper a.active {
+  border-bottom: 2px solid #000;
+  border-radius: 0px;
+  filter: contrast(1);
+  color: #000 !important;
+}
+
+.bottomNav__individual img {
+  max-width: 100%;
+  width: var(--chipsbar-chip-image_size, 24px);
+  height: auto;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.bottomNav__individual span {
+  white-space: nowrap;
+  position: relative;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 786px) {
+  .bottomNav {
+    margin-top: 1rem;
+  }
+  .bottomNav__wrapper {
+    gap: 2rem;
+  }
+}
+@media (max-width: 586px) {
+  .bottomNav {
+    box-shadow: 0 4px 2px -2px rgb(234, 235, 234);
+    margin-top: 0.5rem;
+    height: 80px;
+  }
+}

@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p{
+  margin-bottom: 0rem !important;
+}
+
+
+.contain{
+  width: 90% !important;
+  margin: auto !important;
+}

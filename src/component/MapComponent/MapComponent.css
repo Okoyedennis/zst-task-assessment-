@@ -1,0 +1,28 @@
+.map {
+  height: calc(100% - 180px);
+}
+
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.map button,
+.map button:hover {
+  background-color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important ;
+  border-radius: 40px !important;
+  padding: 0.3rem 0.5rem !important;
+  color: #222222;
+}
+
+.popover-body {
+    color: var(--bs-popover-body-color);
+    width: fit-content !important;
+    background-color: white;
+    padding: .1rem 1rem !important;
+    border-radius: 10px;
+}
+
