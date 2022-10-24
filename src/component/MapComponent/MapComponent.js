@@ -10,7 +10,6 @@ import Popover from "react-bootstrap/Popover";
 
 import { FiHeart } from "react-icons/fi";
 import { IoMdStar } from "react-icons/io";
-import img from "../../images/ArcticPhoto/photo1/image3.webp";
 
 const MapComponent = () => {
   const [searchResult] = useState(Mapdata);
@@ -36,7 +35,7 @@ const MapComponent = () => {
         mapboxAccessToken="pk.eyJ1IjoiZGVubmlzMDciLCJhIjoiY2w5bDUxdWlxMWdoczN2bzB6d2kwcmp4dCJ9.mxbfKgfiYz43qkyvUWY4tA"
         style={{
           width: "100vw",
-          height: "80vh",
+          height: "81vh",
         }}
         {...viewport}
         onViewportChange={(nextViewPort) => setViewport(nextViewPort)}
@@ -54,7 +53,7 @@ const MapComponent = () => {
                       <div className="individualHome">
                         <div className="individualHome__wrapper">
                           <div className="image__wrapper">
-                            <img src={img} alt="img" />
+                            <img src={result.img} alt="img" />
                             <div className="image__top-layer">
                               <div className="heart__icon-wrapper">
                                 <div className="heartSpace" />

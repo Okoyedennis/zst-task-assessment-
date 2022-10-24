@@ -8,8 +8,7 @@
   cursor: pointer;
 }
 
-.map button,
-.map button:hover {
+.map button{
   background-color: #fff !important;
   font-size: 1rem !important;
   font-weight: 600 !important ;
@@ -18,11 +17,18 @@
   color: #222222;
 }
 
-.popover-body {
-    color: var(--bs-popover-body-color);
-    width: fit-content !important;
-    background-color: white;
-    padding: .1rem 1rem !important;
-    border-radius: 10px;
+.map button:hover {
+     color: #222222;
+      background-color: #fff !important;
+  box-shadow: 0px 0px 0px 1px transparent, 0px 0px 0px 4px transparent,
+    0px 6px 16px rgb(0 0 0 / 12%) !important;
+  transform: scale(1.04) !important;
 }
 
+.popover-body {
+  color: var(--bs-popover-body-color);
+  width: fit-content !important;
+  background-color: white;
+  padding: 0.1rem 1rem !important;
+  border-radius: 10px;
+}
